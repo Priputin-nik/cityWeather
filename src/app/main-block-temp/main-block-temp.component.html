@@ -1,0 +1,13 @@
+<div class="wrapper">
+<div class="main-info">
+<div class="city">{{ (data$ | async)?.name }}: {{ ((data$ | async)?.main.temp) | changeDegree: toggle}}</div>
+<app-degree></app-degree>
+<div class="description">{{ ((data$ | async)?.weather[0].description) | titleStyle }}</div>
+</div>
+<div class="other-parameters">
+  <div>Ветер: {{ (data$ | async)?.wind.speed }} м/с</div>
+  <div>Давление: {{ (data$ | async)?.main.pressure }} ГПа</div>
+  <div>Влажность: {{ (data$ | async)?.main.humidity }}%</div>
+  <div>Вероятность дождя: {{ (data$ | async)?.clouds.all }}% </div>
+</div>
+</div>

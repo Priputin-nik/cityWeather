@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  justify-content:space-between;
+  height: 600px;
+}
+
+.city {
+  font-size: 50px;
+  color: white;
+  height: 100px;
+  padding: 0px;
+}
+
+.main-info {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  margin-top: 50px;
+  color: white;
+  font-size: 25px;
+}
+
+.other-parameters {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.other-parameters div {
+  color: white;
+  font-size: 16px;
+}
+
