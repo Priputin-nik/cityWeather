@@ -19,7 +19,6 @@ export class DataSourceService {
       filter((value) => cities.includes(value)),
       switchMap((value) => getWeatherDataService.getDataAPI(value))
     );
-    this.dataSource$.subscribe(m => console.log(m));
   }
 }
 // .weather[0].description)

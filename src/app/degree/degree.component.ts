@@ -9,12 +9,13 @@ import { DataSourceService } from '../data-source.service';
 })
 export class DegreeComponent implements OnInit {
   public data$: Observable<any>;
-  
+
   constructor(public dataSourceService: DataSourceService) {
     this.data$ = dataSourceService.dataSource$.pipe(share());
   }
 
   ngOnInit() {
+  
   }
 
 }

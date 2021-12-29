@@ -11,15 +11,19 @@ import { ToggleCondition } from '../toggle-condition.enum';
 export class MainBlockTempComponent implements OnInit {
   @Input() public toggle: ToggleCondition;
 
-  
+  h: string = '03d'
   public data$: Observable<any>;
+
 
   constructor(public dataSourceService: DataSourceService) {
     this.data$ = dataSourceService.dataSource$.pipe(share());
     this.toggle = ToggleCondition.celsius;
+    // this.data$.subscribe(m => console.log(m));
+
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {  
+
   }
 
 }
