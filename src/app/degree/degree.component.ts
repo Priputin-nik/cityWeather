@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, share } from 'rxjs';
+import { map, Observable, share } from 'rxjs';
 import { DataSourceService } from '../data-source.service';
 
 @Component({
@@ -11,7 +11,9 @@ export class DegreeComponent implements OnInit {
   public data$: Observable<any>;
 
   constructor(public dataSourceService: DataSourceService) {
-    this.data$ = dataSourceService.dataSource$.pipe(share());
+    this.data$ = dataSourceService.dataSource$.pipe(
+      map(value => value.weather[0].icon)
+    );
   }
 
   ngOnInit() {
